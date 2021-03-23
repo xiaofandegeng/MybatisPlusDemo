@@ -2,6 +2,7 @@ package com.ning4256.mybatisplusdemo.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.Version;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -19,5 +20,9 @@ public class User {
 
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updateTime;
+
+    @Version
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private Integer version;
 
 }

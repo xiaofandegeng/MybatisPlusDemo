@@ -16,8 +16,8 @@ class MybatisplusdemoApplicationTests {
 
     @Test
     void  updateUser() {
-        User user = new User();
-        user.setId(1374384193030709250L);
+
+        User user = userMapper.selectById(1374390672945180673L);
         user.setName("lisi");
         int res = userMapper.updateById(user);
         System.out.println("res: " + res);
@@ -27,7 +27,7 @@ class MybatisplusdemoApplicationTests {
     void addUser() {
         User user = new User();
         user.setAge(18);
-        user.setName("xiaoli111");
+        user.setName("xiaowangTest11");
         user.setEmail("441255@qq.com");
         int res = userMapper.insert(user);
         System.out.println(res);
